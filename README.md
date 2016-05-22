@@ -1,47 +1,46 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-# Talk Template
+# Django API
 
-Use this template to structure your READMEs for talks. Remove text from this
-section, or use it to frame the talk you are giving. Good framing answers the
-question "Why am I learning this?".
+We'll explore [django](https://www.djangoproject.com/), a popular
+ [python](https://www.python.org/) web framework.
 
-Be sure to include a recent [`LICENSE`](LICENSE) and Markdown linter
-configuration ([`.remarkrc`](.remarkrc)). Also, include an appropriate
-`.gitignore`; these are usually found in specific technology templates, for
-example [js-template](https://www.github.com/ga-wdi-boston/js-template).
+We'll use the [Django REST framework](http://www.django-rest-framework.org/),
+ to build a JSON API.
+
+We'll see how `django` provides a mechanism to create an administrative
+ interface with little effort on our part.
 
 ## Prerequisites
 
--   Topics with which developers should be familiar with.
--   Prerequisites are "just-in-time", so if I have a prerequisite that mentions
-    Sass, I would **not** need to include CSS as a prerequisite.
--   [Links to previous materials](https://www.github.com/ga-wdi-boston/example)
-    are often useful.
+-   Experience building web APIs
+-   Experience with 1 or more high level languages.
+-   [ga-wdi-boston/python](https://www.github.com/ga-wdi-boston/python).
 
 ## Objectives
 
 By the end of this, developers should be able to:
 
--   Write objectives that focus on demonstrating knowledge.
--   Write learning objectives that begin with an [imperative
-    verb](https://en.wikipedia.org/wiki/Imperative_mood).
--   Avoid objectives that start with "Use" or "Understand".
--   Rewrite objecives that begin with "Use" by inverting sentence structure.
--   End each objective with a period.
--   Write objectives on the whiteboard so they can be referenced during a talk.
+-   Create a simple JSON API using the Django REST framework.
 
 ## Preparation
 
 1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
     this repository.
-1.  Install dependencies with `npm install`.
+1.  Install dependencies with `pip install -r requirements.txt`.
+1.  Create a development database with `createdb django-api-development`.
+1.  Test the database with `./manage.py dbshell`.
+1.  Test that django starts with `./manage.py runserver`.
+1.  Run migrations with `./manage.py migrate`.
+1.  Create an administrative user with `./manage.py createsuperuser`.
 
-Better preparation instructions may be found as
-[snippets](https://github.com/ga-wdi-boston/instructors/tree/master/snippets).
+    -   Enter `admin` for the Username.
+    -   Enter `admin123` for Password and Password (again).
 
-It's a good idea to have students do these steps while you're writing objectives
-on the whiteboard.
+1.  Test the api.
+
+    -   Restart the server.
+    -   Open `http://locahost:8000/` in a web browser and login as `admin`.
 
 ## Leading Topic Heading
 
@@ -61,7 +60,7 @@ applying them in an exercise.
 
 Demos correspond to the "I do" portion of scaffolding from consultant trainging.
 
-## Exercise: Write an Exercise
+## Code along: Write an Code along
 
 During exercises, developers should apply concepts covered in the previous demo.
 This is their first chance to generalize concepts introduced. Exercises should
@@ -91,13 +90,9 @@ trainging.
 
 ## Additional Resources
 
--   Any useful links should be included in the talk material where the link is
-    first referenced.
--   Additional links for further study or exploration are appropriate in this
-    section.
--   Links to important parts of documentation not covered during the talk, or
-    tools tangentially used but not part of the focus of the talk, are also
-    appropriate.
+-   [django documentation](https://docs.djangoproject.com/en/1.9/).
+-   [python documentation](https://docs.python.org/3/).
+-   [django REST framework](http://www.django-rest-framework.org/).
 
 ## [License](LICENSE)
 
